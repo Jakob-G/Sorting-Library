@@ -1,6 +1,5 @@
 package Sorters;
 
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -14,7 +13,7 @@ public class CountingSort {
     public List list = new ArrayList<Integer>();
 
     public void load(){
-        try (Stream<String> stream = Files.lines(Paths.get("C:\\Users\\jakob_3g12ckh\\Documents\\term3\\algorithms\\SortingLibrary\\numbers.txt"))) {
+        try (Stream<String> stream = Files.lines(Paths.get("C:\\Users\\jakob_3g12ckh\\Documents\\term3\\algorithms\\SortingLibrary\\Project\\src\\Testers\\numbers.txt"))) {
             stream.forEach(x -> list.add(Integer.parseInt(x)));
         } catch (IOException e) {
             e.printStackTrace();
@@ -32,7 +31,6 @@ public class CountingSort {
             newList.add(0);
         }
         for(int x=0;x<length;x++){
-
             newList.set((Integer)list.get(x),(Integer)newList.get((Integer)list.get(x))+1);
         }
         int counter = 0;
