@@ -13,7 +13,7 @@ public class CountingSort {
     public List list = new ArrayList<Integer>();
 
     public void load(){
-        try (Stream<String> stream = Files.lines(Paths.get("C:\\Users\\jakob_3g12ckh\\Documents\\term3\\algorithms\\SortingLibrary\\Project\\src\\Testers\\numbers.txt"))) {
+        try (Stream<String> stream = Files.lines(Paths.get("Testers\\numbers.txt"))) {
             stream.forEach(x -> list.add(Integer.parseInt(x)));
         } catch (IOException e) {
             e.printStackTrace();
