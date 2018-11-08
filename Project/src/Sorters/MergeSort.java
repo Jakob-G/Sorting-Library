@@ -1,17 +1,15 @@
-import edu.princeton.cs.algs4.Stopwatch;
+package Sorters;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 import java.util.stream.Stream;
 
-public class Sorting {
+public class MergeSort {
 
-    protected List list = new ArrayList<Integer>();
+    public List list = new ArrayList<Integer>();
 
     protected void load(){
         try (Stream<String> stream = Files.lines(Paths.get("Testers\\numbers.txt"))) {
@@ -20,15 +18,11 @@ public class Sorting {
             e.printStackTrace();
         }
     }
-    protected double test(){
-        Stopwatch watch = new Stopwatch();
-//        for (int i=0; i<100; i++){
-//            Collections.shuffle(list, new Random(100));
-//
-//        }
-        sort(list);
-        return watch.elapsedTime();
-    }
+
+    public void test(){
+    sort(list);
+}
+
 
     private void sort(List list){
         List newList = new ArrayList<Integer>();
