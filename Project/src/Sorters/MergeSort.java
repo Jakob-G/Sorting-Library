@@ -11,7 +11,7 @@ public class MergeSort {
 
     public List list = new ArrayList<Integer>();
 
-    protected void load(){
+    public void load(){
         try (Stream<String> stream = Files.lines(Paths.get("Testers\\numbers.txt"))) {
             stream.forEach(x -> list.add(Integer.parseInt(x)));
         } catch (IOException e) {

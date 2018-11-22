@@ -13,7 +13,7 @@ public class BubbleSort {
     public List list = new ArrayList<Integer>();
 
     public void load(){
-        try (Stream<String> stream = Files.lines(Paths.get("Testers\\numbers.txt"))) {
+        try (Stream<String> stream = Files.lines(Paths.get("src\\Testers\\numbers.txt"))) {
             stream.forEach(x -> list.add(Integer.parseInt(x)));
         } catch (IOException e) {
             e.printStackTrace();

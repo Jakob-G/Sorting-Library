@@ -13,7 +13,7 @@ public class CountingSort {
     public List list = new ArrayList<Integer>();
 
     public void load(){
-        try (Stream<String> stream = Files.lines(Paths.get("Testers\\numbers.txt"))) {
+        try (Stream<String> stream = Files.lines(Paths.get("src\\Testers\\numbers.txt"))) {
             stream.forEach(x -> list.add(Integer.parseInt(x)));
         } catch (IOException e) {
             e.printStackTrace();
@@ -27,10 +27,13 @@ public class CountingSort {
 
         int length = list.size();
         List newList = new ArrayList<Integer>();
-        for(int x=0;x<1001;x++){
-            newList.add(0);
-        }
+
         for(int x=0;x<length;x++){
+            if (newList.size()<(Integer)list.get(x)+1){
+                for(int n=newList.size();n<(Integer)list.get(x)+1;n++){
+                    newList.add(0);
+                }
+            }
             newList.set((Integer)list.get(x),(Integer)newList.get((Integer)list.get(x))+1);
         }
         int counter = 0;
@@ -42,3 +45,4 @@ public class CountingSort {
         }
     }
 }
+
