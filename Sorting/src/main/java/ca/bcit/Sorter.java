@@ -2,8 +2,11 @@ package com.jakobgarricks;
 import java.util.List;
 
 public interface Sorter{
+
     /**
-    * Sorts the List
-    * */
+     *
+     * @param list
+     * @return
+     */
     List Sort(List<Integer> list);
 }
