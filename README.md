@@ -1,3 +1,5 @@
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.Jakob-G.SortingLibrary/SortingLibrary/badge.svg?style=plastic)](https://maven-badges.herokuapp.com/maven-central/com.github.Jakob-G.SortingLibrary/SortingLibrary)
+
 <h1>SORTING ALGORITHM LIBRARY</h1></br>
 
 <h2>
@@ -25,9 +27,9 @@ It's open source and anyone can contribute!</br>
 <h2>VERSIONING</h2>
 Version 1.0.0</br>
 <h2>AUTHORS</h2>
-Nam Tran:       A01020654</br>
-Jakob Garricks: A01027987</br>
-Ko Iketani:     A00000000</br>
+Nam Tran:       @Trnam</br>
+Jakob Garricks: @jakobG</br>
+Ko Iketani:     @koiketani</br>
 <h2>LICENSE</h2>
 No License</br>
 <h2>ACKNOWLEDGEMENTS</h2>
