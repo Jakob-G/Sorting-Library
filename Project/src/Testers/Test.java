@@ -1,6 +1,6 @@
 package Testers;
-//Import the type of sort here
 import Sorters.CountingSort;
+import java.util.Scanner;
 
 public class Test {
 
