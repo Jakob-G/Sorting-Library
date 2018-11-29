@@ -11,39 +11,36 @@ import java.util.stream.Stream;
 
 public class Sorting {
 
-    protected List testList = new ArrayList<Integer>();
+    protected List testList = new ArrayList<>();
 
     protected void load(){
-        try (Stream<String> stream = Files.lines(Paths.get("numbers.txt"))) {
-            stream.forEach(x -> testList.add(Integer.parseInt(x)));
-        } catch (IOException e) {
-            e.printStackTrace();
+        for(int x = 0;x<1000;x++){
+            testList.add((Math.random()*100));
         }
     }
-    protected double test(){
+    protected void test(){
         Stopwatch watch = new Stopwatch();
-        for (int i=0; i<1000; i++){
+        for (int i=0; i<100; i++){
             Collections.shuffle(testList, new Random(100));
             sort(testList);
         }
         System.out.println(watch.elapsedTime());
         Stopwatch compare = new Stopwatch();
-        for (int i=0; i<1000; i++){
+        for (int i=0; i<100; i++){
             Collections.shuffle(testList, new Random(100));
             Collections.sort(testList);
         }
         System.out.println(compare.elapsedTime());
-        return watch.elapsedTime();
     }
 
 
 
     protected void sort(List list){
-        List newList = new ArrayList<Integer>();
+        List newList = new ArrayList<>();
 
 
         for (int i =0; i < list.size(); i++) {
-            List tempList = new ArrayList<Integer>();
+            List tempList = new ArrayList<>();
             tempList.add(list.get(i));
             newList.add(tempList);
 //            System.out.println(tempList);
@@ -51,19 +48,19 @@ public class Sorting {
 //        System.out.println(newList);
 
 
-        List sortedList = new ArrayList<Integer>();
+        List sortedList = new ArrayList<>();
         while (sortedList.size() < list.size()) {
             int pos = 0;
-            List sortedSmallList = new ArrayList<Integer>();
+            List sortedSmallList = new ArrayList<>();
 
             if (newList.size()%2 != 0) {
-                    List tempList = new ArrayList<Integer>();
+                    List tempList = new ArrayList<>();
                     tempList = mergeSort((List) newList.get(pos), (List) newList.get(newList.size()-1));
                     sortedSmallList.add(tempList);
                     pos = 1;
             }
             while (pos < newList.size()) {
-                List tempList = new ArrayList<Integer>();
+                List tempList = new ArrayList<>();
                 tempList = mergeSort((List) newList.get(pos), (List) newList.get(pos+1));
                 sortedSmallList.add(tempList);
 //                System.out.println(sortedSmallList);
@@ -74,44 +71,15 @@ public class Sorting {
             newList = sortedSmallList;
         }
         testList = sortedList;
-//        List listForEveryNum = new ArrayList();
-//        List newList = new ArrayList<>();
-//
-//        for(int i = 0; i < list.size(); ++i) {
-//            List tempList = new ArrayList();
-//            tempList.add(list.get(i));
-//            listForEveryNum.add(tempList);
-//        }
-//
-//        ArrayList sortedSmallList;
-//        for(Object sortedList = new ArrayList();
-//            ((List)sortedList).size() != list.size();
-//            sortedList = (List)sortedSmallList.get(0)
-//        )
-//        {
-//            int pos = 0;
-//
-//            for(sortedSmallList = new ArrayList(); pos + 1 < listForEveryNum.size(); pos += 2) {
-//                new ArrayList();
-//                List tempList = this.mergeSort((List)listForEveryNum.get(pos), (List)listForEveryNum.get(pos + 1));
-//                sortedSmallList.add(tempList);
-//            }
-//            listForEveryNum = sortedSmallList;
-//            if (sortedSmallList.size() == 1) {
-//                newList = (List)sortedSmallList.get(0);
-//                break;
-//            }
-//        }
-//        testList = newList;
     }
 
     private List mergeSort(List firstList, List secList) {
         ArrayList sortedList = new ArrayList();
 
-        int num;
+        double num;
         while(firstList.size() != 0 && secList.size() != 0) {
-            num = (Integer)firstList.get(0);
-            int secNum = (Integer)secList.get(0);
+            num = (Double) firstList.get(0);
+            double secNum = (Double)secList.get(0);
             if (num <= secNum) {
                 sortedList.add(num);
                 firstList.remove(0);
@@ -122,13 +90,13 @@ public class Sorting {
         }
 
         while(firstList.size() != 0) {
-            num = (Integer)firstList.get(0);
+            num = (Double)firstList.get(0);
             sortedList.add(num);
             firstList.remove(0);
         }
 
         while(secList.size() != 0) {
-            num = (Integer)secList.get(0);
+            num = (Double)secList.get(0);
             sortedList.add(num);
             secList.remove(0);
         }
