@@ -3,9 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ca.bcit.kingTJ</groupId>
-    <artifactId>sortinglibrary</artifactId>
-    <version>1.0.1</version>
+    <groupId>ca.bcit.KaJiN</groupId>
+    <artifactId>sort</artifactId>
+    <version>1.0.0</version>
 
     <name>Sorting Library</name>
     <description>This is a simple Sorting library for a Final Project
@@ -40,21 +40,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <!-- Build an executable JAR -->
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.0</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.jakobgarricks.CountingSort</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-clean-plugin</artifactId>

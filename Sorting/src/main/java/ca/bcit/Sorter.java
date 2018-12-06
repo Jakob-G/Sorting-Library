@@ -1,12 +1,12 @@
-package com.jakobgarricks;
+package ca.bcit;
 import java.util.List;
 
-public interface Sorter{
+public interface sorter{
 
     /**
      *
      * @param list
      * @return
      */
-    List Sort(List<Integer> list);
+    List sort(List<Integer> list);
 }

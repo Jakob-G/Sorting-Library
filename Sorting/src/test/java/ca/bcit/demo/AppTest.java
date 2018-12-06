@@ -1,4 +1,4 @@
-package com.jakobgarricks.demo;
+package ca.bcit.demo;
 
 import static org.junit.Assert.assertTrue;
 
@@ -10,7 +10,7 @@ import org.junit.Test;
 public class AppTest
 {
     /**
-     * Rigorous Test :-)
+     * Rigorous jest :-)
      */
     @Test
     public void shouldAnswerWithTrue()

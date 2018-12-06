@@ -1,4 +1,5 @@
-com\jakobgarricks\CountingSort.class
-com\jakobgarricks\demo\App.class
-com\jakobgarricks\Sorter.class
-com\jakobgarricks\StringSort.class
+ca\bcit\sorter.class
+ca\bcit\demo\App.class
+ca\bcit\stringSort.class
+ca\bcit\countingSort.class
+ca\bcit\fullSort.class
