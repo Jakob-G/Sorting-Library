@@ -17,7 +17,7 @@ public class StringsSort {
     }
 
     public void load() {
-        try (Stream<String> stream = Files.lines(Paths.get("src\\Testers\\smallStrings.txt"))) {
+        try (Stream<String> stream = Files.lines(Paths.get("src\\Testers\\strings.txt"))) {
             stream.forEach(x -> list.add(x));
         } catch (IOException e) {
             e.printStackTrace();
