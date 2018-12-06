@@ -1,37 +1,23 @@
-package com.jakobgarricks;
+package ca.bcit;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Random;
-import edu.princeton.cs.algs4.Stopwatch;
 
-public class Fullsort {
+public class fullSort implements sorter {
 
-    protected List testList = new ArrayList();
-
-    protected void load(){
-        for(int x = 0;x<1000;x++){
-            testList.add((Math.random()*100));
-        }
-    }
-    protected void test(){
-        Stopwatch watch = new Stopwatch();
-        for (int i=0; i<100; i++){
-            Collections.shuffle(testList, new Random(100));
-            sort(testList);
-        }
-        System.out.println(watch.elapsedTime());
-        Stopwatch compare = new Stopwatch();
-        for (int i=0; i<100; i++){
-            Collections.shuffle(testList, new Random(100));
-            Collections.sort(testList);
-        }
-        System.out.println(compare.elapsedTime());
-    }
-
-
-
-    protected void sort(List list){
+    /**
+     ** The first loop in the method is basically making every
+     *  items in the list to become a list itself.
+     *  So for example if the list has 1000 items,
+     *  the loop makes 1000 lists in that list.
+     *
+     * Inside the second loop we are constantly pairing up the indexes
+     * next to each other using mergeSort() and then add them into a new list.
+     *
+     *
+     * @param list - the list you want to be sorted
+     * @return list - the sorted list
+     */
+    public List sort(List list){
         List newList = new ArrayList();
 
 
@@ -39,9 +25,7 @@ public class Fullsort {
             List tempList = new ArrayList();
             tempList.add(list.get(i));
             newList.add(tempList);
-//            System.out.println(tempList);
         }
-//        System.out.println(newList);
 
 
         List sortedList = new ArrayList();
@@ -59,23 +43,28 @@ public class Fullsort {
                 List tempList = new ArrayList();
                 tempList = mergeSort((List) newList.get(pos), (List) newList.get(pos+1));
                 sortedSmallList.add(tempList);
-//                System.out.println(sortedSmallList);
                 pos += 2;
             }
-//            System.out.println(pos);
             sortedList = (List) sortedSmallList.get(0);
             newList = sortedSmallList;
         }
-        testList = sortedList;
+        return sortedList;
     }
 
+
+    /**
+     *
+     * @param firstList - The first list of the two you want to pair up (has to be sorted && can be empty)
+     * @param secList - The second list of the two you want to pair up (has to be sorted && can be empty)
+     * @return - The sorted list that resulted from combining the 2 lists
+     */
     private List mergeSort(List firstList, List secList) {
         ArrayList sortedList = new ArrayList();
 
-        double num;
+        int num;
         while(firstList.size() != 0 && secList.size() != 0) {
-            num = (Double) firstList.get(0);
-            double secNum = (Double)secList.get(0);
+            num = (Integer) firstList.get(0);
+            int secNum = (Integer)secList.get(0);
             if (num <= secNum) {
                 sortedList.add(num);
                 firstList.remove(0);
@@ -86,13 +75,13 @@ public class Fullsort {
         }
 
         while(firstList.size() != 0) {
-            num = (Double)firstList.get(0);
+            num = (Integer) firstList.get(0);
             sortedList.add(num);
             firstList.remove(0);
         }
 
         while(secList.size() != 0) {
-            num = (Double)secList.get(0);
+            num = (Integer) secList.get(0);
             sortedList.add(num);
             secList.remove(0);
         }
@@ -100,16 +89,5 @@ public class Fullsort {
         return sortedList;
     }
 
-    public static void main( String[] args )
-    {
-
-        try {
-            Fullsort sorting = new Fullsort();
-            sorting.test();
-            sorting.test();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
 }

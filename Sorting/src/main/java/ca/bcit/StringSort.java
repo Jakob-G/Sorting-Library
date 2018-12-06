@@ -1,4 +1,4 @@
-package com.jakobgarricks;
+package ca.bcit;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -6,9 +6,8 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 import java.util.List;
-import java.util.stream.Stream;
 
-public class StringSort {
+public class stringSort {
     private List<String> list = new ArrayList<String>();
     private int radix = 256;
     private int maxLen;
@@ -16,17 +15,6 @@ public class StringSort {
     public List<String> getList() {
         return list;
     }
-
-//    public void load(){
-//        try (Stream<String> stream = Files.lines(Paths.get("src\\Testers\\smallStrings.txt"))) {
-//            stream.forEach(x -> list.add(x));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-//    public void test(){
-//        sort(list);
-//    }
 
     private int getRadixVal(String x, int digit) {
         return (int)x.charAt(maxLen - digit);
