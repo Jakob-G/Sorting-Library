@@ -1,5 +1,5 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.Jakob-G.Sorting-Library/SortingLibrary/badge.svg?style=plastic)](https://maven-badges.herokuapp.com/maven-central/com.github.Jakob-G.Sorting-Library/SortingLibrary)
-
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/ca.bcit.KaJiN/sort/badge.svg?style=plastic)](https://maven-badges.herokuapp.com/maven-central/ca.bcit.KaJiN/sort)
 <h1>SORTING ALGORITHM LIBRARY</h1></br>
 
 <h2>
@@ -9,10 +9,7 @@ Project Description
 We will be creating a Java sorting library that will be published to Maven</br></br>
 <b>Possible sorting methods that we can add:</b></br>
  - Merge sort</br>
- - Quick sort</br>
- - Insertion sort</br>
- - Bubble sort</br>
- - Heap sort</br>
+ - Radix sort</br>
  - Counting sort</br>
 </P>
 
