@@ -24,7 +24,7 @@ It's open source and anyone can contribute!</br>
 Version 1.0.0</br>
 <h2>AUTHORS</h2>
 Nam Tran:       @Trnam</br>
-Jakob Garricks: @jakobG</br>
+Jakob Garricks: @Jakob-G</br>
 Ko Iketani:     @koiketani</br>
 <h2>LICENSE</h2>
 No License</br>
