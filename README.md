@@ -1,4 +1,3 @@
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.Jakob-G.Sorting-Library/SortingLibrary/badge.svg?style=plastic)](https://maven-badges.herokuapp.com/maven-central/com.github.Jakob-G.Sorting-Library/SortingLibrary)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/ca.bcit.KaJiN/sort/badge.svg?style=plastic)](https://maven-badges.herokuapp.com/maven-central/ca.bcit.KaJiN/sort)
 <h1>SORTING ALGORITHM LIBRARY</h1></br>
 
